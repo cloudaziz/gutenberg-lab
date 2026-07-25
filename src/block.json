@@ -1,0 +1,9 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "gutenberg-lab/group",
+	"title": "Group",
+	"category": "design",
+	"icon": "screenoptions",
+	"editorScript": "file:./index.js"
+}

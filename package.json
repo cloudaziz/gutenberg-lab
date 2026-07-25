@@ -1,0 +1,12 @@
+{
+	"name": "gutenberg-lab",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "wp-scripts start",
+		"build": "wp-scripts build"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^33.0.0"
+	}
+}
