@@ -1,16 +1,25 @@
 import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 
-const ALLOWED_BLOCKS = ['core/paragraph', 'core/heading', 'core/image'];
-const DEFAULT_BLOCK = ['core/image'];
+const TEMPLATE = [
+  ['core/image'],
+  [
+    'core/heading',
+    {
+      placeholder: 'Book Title',
+    },
+  ],
+  [
+    'core/paragraph',
+    {
+      placeholder: 'Book description...',
+    },
+  ],
+];
 
 export default function Edit() {
   return (
     <div {...useBlockProps()}>
-      <InnerBlocks
-        allowedBlocks={ALLOWED_BLOCKS}
-        defaultBlock={DEFAULT_BLOCK}
-        directInsert
-      />
+      <InnerBlocks template={TEMPLATE} />
     </div>
   );
 }
