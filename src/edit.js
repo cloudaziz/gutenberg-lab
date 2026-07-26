@@ -1,18 +1,30 @@
 import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 
 const TEMPLATE = [
-  ['core/image'],
   [
-    'core/heading',
-    {
-      placeholder: 'Book Title',
-    },
-  ],
-  [
-    'core/paragraph',
-    {
-      placeholder: 'Book description...',
-    },
+    'core/columns',
+    {},
+    [
+      ['core/column', {}, [['core/image']]],
+      [
+        'core/column',
+        {},
+        [
+          [
+            'core/heading',
+            {
+              placeholder: 'Title',
+            },
+          ],
+          [
+            'core/paragraph',
+            {
+              placeholder: 'Description...',
+            },
+          ],
+        ],
+      ],
+    ],
   ],
 ];
 
